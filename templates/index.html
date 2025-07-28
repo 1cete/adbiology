@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Biologijos temos</title>
+</head>
+<body>
+  <h1>📘 Biologijos temos</h1>
+  <ul>
+    {% for tema in temos %}
+      <li>
+        <strong>{{ tema.pavadinimas }}</strong><br>
+        <a href="{{ url_for('static', filename='konspektai/' + tema.konspektas) }}" target="_blank">📎 Konspektas</a><br>
+        <a href="{{ tema.testas }}" target="_blank">🧪 Testas</a>
+      </li>
+      <br>
+    {% endfor %}
+  </ul>
+</body>
+</html>
