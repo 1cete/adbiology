@@ -18,7 +18,7 @@
     </nav>
 
     <!-- Temos -->
-    <div class="temos-container">
+    <div id="temos" class="temos-container">
         {% for tema in temos %}
         <div class="tema-card">
             <img src="{{ url_for('static', filename=tema['paveikslelis']) }}" alt="{{ tema['pavadinimas'] }}">
