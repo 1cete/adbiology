@@ -5,16 +5,19 @@ app = Flask(__name__)
 
 temos = [
     {
-        "pavadinimas": "Ląstelės sandara",
-        "konspektas": "lasteles_sandara.pdf",
-        "testas": "https://forms.gle/"
+        "pavadinimas": "Citologija",
+        "konspektas": "citologija.pdf",
+        "testas": "https://forms.gle/",
+        "paveikslelis": "citologija.jpg"
     },
     {
         "pavadinimas": "Kraujotaka",
         "konspektas": "kraujotaka1.pdf",
-        "testas": "https://forms.gle/"
-    }
+        "testas": "https://forms.gle/",
+        "paveikslelis": "kraujotaka.jpg"
+    },
 ]
+
 
 @app.route("/")
 def home():

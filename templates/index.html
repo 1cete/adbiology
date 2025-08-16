@@ -1,19 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="lt">
 <head>
-  <title>Biologijos temos</title>
+    <meta charset="UTF-8">
+    <title>Biologijos puslapis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-  <h1>📘 Biologijos temos</h1>
-  <ul>
-    {% for tema in temos %}
-      <li>
-        <strong>{{ tema.pavadinimas }}</strong><br>
-        <a href="{{ url_for('static', filename='konspektai/' + tema.konspektas) }}" target="_blank">📎 Konspektas</a><br>
-        <a href="{{ tema.testas }}" target="_blank">🧪 Testas</a>
-      </li>
-      <br>
-    {% endfor %}
-  </ul>
+    <!-- Navigacija -->
+    <nav>
+        <h1>Biologijos konspektai</h1>
+        <ul>
+            <li><a href="/">Home</a></li>
+        </ul>
+    </nav>
+
+    <!-- Temos -->
+    <div class="temos-container">
+        {% for tema in temos %}
+        <div class="tema-card">
+            <img src="{{ url_for('static', filename=tema['paveikslelis']) }}" alt="{{ tema['pavadinimas'] }}">
+            <h2>{{ tema['pavadinimas'] }}</h2>
+            <p>
+                <a href="{{ url_for('static', filename=tema['konspektas']) }}" target="_blank">📘 Konspektas</a>
+                <br>
+                <a href="{{ tema['testas'] }}" target="_blank">📝 Testas</a>
+            </p>
+        </div>
+        {% endfor %}
+    </div>
 </body>
 </html>
