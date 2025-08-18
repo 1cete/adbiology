@@ -1,12 +1,12 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #847754;
+    background-color: #ebeb7efe;
 }
 
 /* Viršutinė juosta */
 nav {
-    background-color: #123114;
+    background-color: #2d4e2f;
     color: rgb(2, 0, 0);
     padding: 20px;
     display: flex;
@@ -79,7 +79,7 @@ nav ul li a {
 }
 
 footer {
-    background-color: #123114;
+    background-color: #2d4e2f;
     color: rgb(1, 0, 0);
     padding: 15px 20px;
     display: flex;
