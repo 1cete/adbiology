@@ -89,3 +89,19 @@ footer {
     font-weight: bold;
 }
 
+.vbe-separator {
+    height: 5px;
+    background-color: #213e23; /* žalia juosta */
+    margin: 30px 0 10px 0;
+}
+
+.vbe-header {
+    text-align: center;
+    font-family: "Arial Black", sans-serif;
+    font-size: 48px; /* didelis */
+    color: #010601; /* juoda ar tamsiai žalia */
+    margin-bottom: 20px;
+    text-transform: uppercase; /* kad būtų didžiosiomis */
+}
+
+
