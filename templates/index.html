@@ -13,6 +13,7 @@
         <h1>AD PAMOKOS</h1>
         <ul>
           <li><a href="#temos">Temos</a></li>
+          <li><a href="#vbe">VBE</a></li>
         </ul>
     </nav>
 
@@ -30,6 +31,23 @@
         </div>
         {% endfor %}
     </div>
+
+    <!-- VBE -->
+     <div id="vbe">
+    <div class="vbe-header">VBE</div>
+    <div class="vbe-container">
+        {% for metai in vbe_metai %}
+        <div class="vbe-card">
+            <h3>{{ metai }}</h3>
+            <a href="{{ url_for('static', filename='pdf/' ~ metai ~ '_pagrindine.pdf') }}" target="_blank">Pagrindinė</a><br>
+            <a href="{{ url_for('static', filename='pdf/' ~ metai ~ '_pakartotine.pdf') }}" target="_blank">Pakartotinė</a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
     <!-- Puslapio apačia -->
     <footer>
         <div class=""footer-left"> 📧 ad.pamokos@gmail.com </div>

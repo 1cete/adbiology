@@ -30,11 +30,25 @@ def gauti_temus():
     # Rūšiuoja temas pagal pavadinimą
     return sorted(temos, key=lambda x: x['pavadinimas'])
 
+# Funkcija automatiškai surenka VBE metus iš pdf failų
+def gauti_vbe_metus():
+    pdf_folderis = 'static/pdf'
+    metai = set()
+
+    if os.path.exists(pdf_folderis):
+        for failas in os.listdir(pdf_folderis):
+            match = re.match(r"(\d{4})_(pagrindine|pakartotine)\.pdf", failas)
+            if match:
+                metai.add(int(match.group(1)))  # išsaugom metus kaip skaičių
+
+    return sorted(metai, reverse=True)  # nuo naujausių iki seniausių
+
 
 @app.route("/")
 def home():
     temos = gauti_temus()
-    return render_template("index.html", temos=temos)
+    vbe_metai = gauti_vbe_metus()
+    return render_template("index.html", temos=temos, vbe_metai=vbe_metai)
 
 
 if __name__ == "__main__":
