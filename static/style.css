@@ -7,7 +7,7 @@ body {
 /* Viršutinė juosta */
 nav {
     background-color: #123114;
-    color: white;
+    color: rgb(2, 0, 0);
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -77,3 +77,15 @@ nav ul li a {
     color: #010601;
     text-align: center;
 }
+
+footer {
+    background-color: #123114;
+    color: rgb(1, 0, 0);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    font-weight: bold;
+}
+
