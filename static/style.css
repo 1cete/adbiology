@@ -89,8 +89,46 @@ footer {
     font-weight: bold;
 }
 
+.vbe-container {
+    display: flex;
+    flex-wrap: wrap; /* leidžia metams eiti į naują eilutę */
+    justify-content: space-around; /* tolygiai paskirsto stulpelius */
+    gap: 20px; /* tarpai tarp metų kortelių */
+}
+
+.vbe-year-card {
+    display: flex;
+    flex-direction: column; /* metai + nuorodos po vieną stulpeliu */
+    align-items: center;
+    width: 30%; /* trys metai vienoje eilėje */
+    margin-bottom: 20px;
+}
+
+.vbe-year-card h3 {
+    text-align: center;
+    font-family: 'Arial Black', Arial, sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.vbe-link {
+    display: block; /* vienas po kito */
+    text-decoration: none;
+    background-color: #213e23;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    margin-bottom: 5px; /* tarpas tarp Pagrindinė ir Pakartotinė */
+    text-align: center;
+}
+
+.vbe-link:hover {
+    background-color: #000000;
+}
+
 .vbe-separator {
-    height: 5px;
+    height: 30px;
     background-color: #213e23; /* žalia juosta */
     margin: 30px 0 10px 0;
 }
