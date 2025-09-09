@@ -5,32 +5,32 @@ import re
 app = Flask(__name__)
 
 testai = {
-    "Augalai": [
+    "augalai": [
         ("Audiniai/organai", "https://forms.gle/KDucLNTPh1qvzmmF8"),
         ("Dauginimasis", "https://forms.gle/HQAtTbXFDdwyUmU86"),
     ],
-    "Bakterijos": "https://forms.gle/zJbxUaGXTE3R72wE9",
-    "Baltymu sinteze": "https://forms.gle/ktcJ4NcaE7SuoJzg6",
-    "Cheminiai junginiai": [
+    "bakterijos": "https://forms.gle/zJbxUaGXTE3R72wE9",
+    "baltymų_sintezė": "https://forms.gle/ktcJ4NcaE7SuoJzg6",
+    "cheminiai_junginiai": [
         ("Cheminiai junginiai", "https://forms.gle/s4jEAtbY1BFtqrvD7"),
         ("Baltymai", "https://forms.gle/WvNimTfXPPczcZ8s6"),
     ],
-    "Citologija": "https://forms.gle/CN5bD8AbjZ9MqAA86",
-    "Ekologija": "",
-    "Endokrinine sistema": "https://forms.gle/7ZfdZ6GeeHimM1Rg8",
-    "Evoliucija": "https://forms.gle/2437SXj7gNNkkqZEA",
-    "Fotosinteze": "",
-    "Genetika": "https://forms.gle/svNaWLFDnzGtCiLZ7",
-    "Imunologija": "https://forms.gle/SmZiFGGbxvCbzJjL8",
-    "Kraujotaka": "https://forms.gle/C3B7iTzn8wcHp5Mo8",
-    "Lastelinis kvepavimas": "https://forms.gle/P3Jj4UfMGBsFfJX4A",
-    "Lasteles ciklas": "https://forms.gle/zCEZ8tJCSBV6HhCr7",
-    "Limfotaka": "https://forms.gle/9huTDiSgMWuB5aH89",
-    "Lytine sistema": "https://forms.gle/8YvJpfPJJGs4STCy5",
-    "Membranos": "https://forms.gle/UgjUS1qXtmnvWtHZ6",
-    "Nervu sistema": "https://forms.gle/v7xCy1ca1D6dT1Xy6",
-    "Virskinimas": "https://forms.gle/LhXroRgbLyjEJET59",
-    "Salinimas": "https://forms.gle/xLCTrXBEbfrtgjWp8",
+    "citologija": "https://forms.gle/CN5bD8AbjZ9MqAA86",
+    "ekologija": "",
+    "endokrininė_sistema": "https://forms.gle/7ZfdZ6GeeHimM1Rg8",
+    "evoliucija": "https://forms.gle/2437SXj7gNNkkqZEA",
+    "fotosintezė": "",
+    "genetika": "https://forms.gle/svNaWLFDnzGtCiLZ7",
+    "imunologija": "https://forms.gle/SmZiFGGbxvCbzJjL8",
+    "kraujotaka": "https://forms.gle/C3B7iTzn8wcHp5Mo8",
+    "lastelinis_kvėpavimas": "https://forms.gle/P3Jj4UfMGBsFfJX4A",
+    "lastelės_ciklas": "https://forms.gle/zCEZ8tJCSBV6HhCr7",
+    "limfotaka": "https://forms.gle/9huTDiSgMWuB5aH89",
+    "lytinė_sistema": "https://forms.gle/8YvJpfPJJGs4STCy5",
+    "membranos": "https://forms.gle/UgjUS1qXtmnvWtHZ6",
+    "nervų_sistema": "https://forms.gle/v7xCy1ca1D6dT1Xy6",
+    "virškinimas": "https://forms.gle/LhXroRgbLyjEJET59",
+    "šalinimas": "https://forms.gle/xLCTrXBEbfrtgjWp8",
 }
 
 # Funkcija automatiškai surenka temas pagal paveikslėlius ir PDF konspektus
