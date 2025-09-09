@@ -4,8 +4,38 @@ import re
 
 app = Flask(__name__)
 
+testai = {
+    "Augalai": [
+        ("Audiniai/organai", "https://forms.gle/KDucLNTPh1qvzmmF8"),
+        ("Dauginimasis", "https://forms.gle/HQAtTbXFDdwyUmU86"),
+    ],
+    "Bakterijos": "https://forms.gle/zJbxUaGXTE3R72wE9",
+    "Baltymu sinteze": "https://forms.gle/ktcJ4NcaE7SuoJzg6",
+    "Cheminiai junginiai": [
+        ("Cheminiai junginiai", "https://forms.gle/s4jEAtbY1BFtqrvD7"),
+        ("Baltymai", "https://forms.gle/WvNimTfXPPczcZ8s6"),
+    ],
+    "Citologija": "https://forms.gle/CN5bD8AbjZ9MqAA86",
+    "Ekologija": "",
+    "Endokrinine sistema": "https://forms.gle/7ZfdZ6GeeHimM1Rg8",
+    "Evoliucija": "https://forms.gle/2437SXj7gNNkkqZEA",
+    "Fotosinteze": "",
+    "Genetika": "https://forms.gle/svNaWLFDnzGtCiLZ7",
+    "Imunologija": "https://forms.gle/SmZiFGGbxvCbzJjL8",
+    "Kraujotaka": "https://forms.gle/C3B7iTzn8wcHp5Mo8",
+    "Lastelinis kvepavimas": "https://forms.gle/P3Jj4UfMGBsFfJX4A",
+    "Lasteles ciklas": "https://forms.gle/zCEZ8tJCSBV6HhCr7",
+    "Limfotaka": "https://forms.gle/9huTDiSgMWuB5aH89",
+    "Lytine sistema": "https://forms.gle/8YvJpfPJJGs4STCy5",
+    "Membranos": "https://forms.gle/UgjUS1qXtmnvWtHZ6",
+    "Nervu sistema": "https://forms.gle/v7xCy1ca1D6dT1Xy6",
+    "Virskinimas": "https://forms.gle/LhXroRgbLyjEJET59",
+    "Salinimas": "https://forms.gle/xLCTrXBEbfrtgjWp8",
+}
+
 # Funkcija automatiškai surenka temas pagal paveikslėlius ir PDF konspektus
 def gauti_temus():
+
     paveiksleliai_folderis = 'static/paveiksleliai'
     konspektai_folderis = 'static/konspektai'
     temos = []
@@ -15,7 +45,7 @@ def gauti_temus():
             tema_vardas = os.path.splitext(failas)[0]  # pvz., 'citologija'
             paveikslelis = f"paveiksleliai/{failas}"
             konspektas_path = f"konspektai/{tema_vardas}.pdf"
-            testas_url = "https://forms.gle/"  # gali pakeisti pagal temą
+            testas_url = testai.get(tema_vardas, "#")  # gali pakeisti pagal temą
             
             # Tikrina, ar PDF konspektas egzistuoja
             if not os.path.exists(f"static/{konspektas_path}"):
